@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>New Recipe</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.title.label }}<br>
+    {{ form.title(size=50) }}<br><br>
+    {{ form.description.label }}<br>
+    {{ form.description(rows=3, cols=50) }}<br><br>
+    {{ form.ingredients.label }}<br>
+    {{ form.ingredients(rows=3, cols=50) }}<br><br>
+    {{ form.instructions.label }}<br>
+    {{ form.instructions(rows=5, cols=50) }}<br><br>
+    {{ form.submit() }}
+</form>
+{% endblock %}
